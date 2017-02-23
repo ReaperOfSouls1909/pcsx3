@@ -1,10 +1,8 @@
-<UI version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>pcsx3Class</class>
- <widget class="QMainWindow" name="pcsx3Class" >
-  <property name="objectName" >
-   <string notr="true">pcsx3Class</string>
-  </property>
-  <property name="geometry" >
+ <widget class="QMainWindow" name="pcsx3Class">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -12,18 +10,65 @@
     <height>400</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>pcsx3</string>
   </property>
-  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuBoot">
+    <property name="title">
+     <string>Boot</string>
+    </property>
+    <addaction name="actionOpen_Elf_File"/>
+   </widget>
+   <addaction name="menuBoot"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen_Elf_File">
+   <property name="text">
+    <string>Open Elf File</string>
+   </property>
+  </action>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
  <resources>
-   <include location="pcsx3.qrc"/>
+  <include location="pcsx3.qrc"/>
  </resources>
- <connections/>
-</UI>
+ <connections>
+  <connection>
+   <sender>actionOpen_Elf_File</sender>
+   <signal>triggered()</signal>
+   <receiver>pcsx3Class</receiver>
+   <slot>openELF()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>openELF()</slot>
+ </slots>
+</ui>

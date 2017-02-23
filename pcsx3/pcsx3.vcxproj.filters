@@ -5,18 +5,10 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
       <Extensions>qrc;*</Extensions>
       <ParseFiles>false</ParseFiles>
-    </Filter>
-    <Filter Include="Form Files">
-      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
-      <Extensions>ui</Extensions>
     </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
@@ -38,12 +30,18 @@
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{c696c977-47b3-4c4e-9e44-f4836680a825}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem">
+      <UniqueIdentifier>{528d3968-e1b4-43af-8d18-6eb860c1e953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{d39905d1-9c08-404f-b07e-e290b33cec82}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="pcsx3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_pcsx3.cpp">
@@ -56,18 +54,24 @@
       <Filter>Generated Files</Filter>
     </ClCompile>
     <ClCompile Include="fsFile.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="pcsx3.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="loader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="pcsx3.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="pcsx3.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="pcsx3.qrc">
       <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pcsx3.ui">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pcsx3.h">
+      <Filter>GUI</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -75,13 +79,16 @@
       <Filter>Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="common.h">
-      <Filter>Header Files</Filter>
+      <Filter>common</Filter>
     </ClInclude>
     <ClInclude Include="types.h">
-      <Filter>Header Files</Filter>
+      <Filter>common</Filter>
     </ClInclude>
     <ClInclude Include="fsFile.h">
-      <Filter>Header Files</Filter>
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="loader.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
