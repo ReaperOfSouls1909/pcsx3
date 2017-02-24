@@ -13,17 +13,17 @@ fsFile::fsFile(const std::string& path, fsOpenMode mode)
 }
 bool fsFile::Close()
 {
-	if (!IsOpen() || std::fclose(m_file) != 0) {
+/*	if (!IsOpen() || std::fclose(m_file) != 0) {
 		m_file = nullptr;
 		return false;
 	}
 
-	m_file = nullptr;
+	m_file = nullptr;*/
 	return true;
 }
 fsFile::~fsFile()
 {
-	Close();
+	//Close();
 }
 
 bool fsFile::Write(const void* src, U64 size)

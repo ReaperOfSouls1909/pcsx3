@@ -29,7 +29,14 @@
     </property>
     <addaction name="actionOpen_Elf_File"/>
    </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionInstall_FW_update"/>
+   </widget>
    <addaction name="menuBoot"/>
+   <addaction name="menuTools"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -43,6 +50,11 @@
   <action name="actionOpen_Elf_File">
    <property name="text">
     <string>Open Elf File</string>
+   </property>
+  </action>
+  <action name="actionInstall_FW_update">
+   <property name="text">
+    <string>Install FW update</string>
    </property>
   </action>
  </widget>
@@ -67,8 +79,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>actionInstall_FW_update</sender>
+   <signal>triggered()</signal>
+   <receiver>pcsx3Class</receiver>
+   <slot>installFW()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>openELF()</slot>
+  <slot>installFW()</slot>
  </slots>
 </ui>

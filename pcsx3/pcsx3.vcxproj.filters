@@ -39,6 +39,9 @@
     <Filter Include="GUI">
       <UniqueIdentifier>{d39905d1-9c08-404f-b07e-e290b33cec82}</UniqueIdentifier>
     </Filter>
+    <Filter Include="fileTypes">
+      <UniqueIdentifier>{e3f3f959-0601-4bb9-ae6f-c6cbbf91bdf7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -61,6 +64,9 @@
     </ClCompile>
     <ClCompile Include="loader.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fileTypes\PUP.cpp">
+      <Filter>fileTypes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +95,9 @@
     </ClInclude>
     <ClInclude Include="loader.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fileTypes\PUP.h">
+      <Filter>fileTypes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

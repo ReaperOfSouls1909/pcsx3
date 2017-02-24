@@ -1,8 +1,8 @@
-#pragma one
+#pragma once
 
 enum FileTypes
 {
-	FILETYPE_NONE,
+	FILETYPE_UNKNOWN,
 	FILETYPE_ELF,
 	FILETYPE_SELF,
 	FILETYPE_PRX,
@@ -11,4 +11,4 @@ enum FileTypes
 	FILETYPE_PKG,
 	FILETYPE_PSF
 };
-bool detectFileType(const std::string& filepath);
+FileTypes detectFileType(const std::string& filepath);

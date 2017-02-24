@@ -17,4 +17,5 @@ private:
 
 public slots:
 	void openELF();
+	void installFW();
 };
